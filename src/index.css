@@ -1,23 +1,148 @@
+* {
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+#setPic::before {
+  content: '';
+  opacity: 0.75;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(https://source.unsplash.com/1920x1032/?random);
+}
+
 .site-logo {
-  color: #fff;
+  color: white;
+  font-size: 2rem;
+}
+.site-logo:hover {
+  color: #f5f5f5;
   font-size: 2rem;
 }
 
 main {
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 2px;
+  margin: 0 auto;
+  /* background: none; */
+  background-color: '#762109';
 }
 
 .container {
-  background: none;
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
 }
 
+.vertical-center {
+  height: 50%;
+  -ms-transform: translateY(55%);
+  transform: translateY(55%);
+}
+
+.quote {
+  font-size: 3rem;
+}
+
+.quote::before {
+  content: '"';
+}
+.quote::after {
+  content: '"';
+}
+.author {
+  font-size: 2rem;
+  float: right;
+}
+.author::before {
+  content: '\a\a-';
+}
+
 .ant-layout,
+.ant-layout-content,
 .ant-layout-footer {
   background: none !important;
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.quotecontent {
+  overflow: hidden;
+}
+
+.quoteContent:hover {
+  color: #000;
+  scale: 1.5;
+}
+
+#setPic {
+  -webkit-animation: fade 8s infinite;
+  -moz-animation: fade 8s infinite;
+  -o-animation: fade 8s infinite;
+  animation: fade 8s infinite;
+}
+
+#setPic {
+  position: relative;
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  transition: all 8s 2s ease-in-out;
+  -webkit-animation: fade 8s infinite;
+  -moz-animation: fade 8s infinite;
+  -o-animation: fade 8s infinite;
+  animation: fade 8s infinite;
+}
+#setPic:hover {
+  background-size: 110% auto;
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
